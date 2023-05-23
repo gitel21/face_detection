@@ -67,7 +67,7 @@ class App extends Component {
 
    onBtnSubmit = () => {
       this.setState({imageUrl: this.state.input});
-         fetch('https://morning-depths-69919.herokuapp.com/imageurl', {
+         fetch('https://face-detection-be.onrender.com/imageurl', {
             method: 'post',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
@@ -77,7 +77,7 @@ class App extends Component {
          .then(response => response.json())
          .then(response => {
             if(response) {
-               fetch('https://morning-depths-69919.herokuapp.com/image', {
+               fetch('https://face-detection-be.onrender.com/image', {
                   method: 'put',
                   headers: {'Content-type': 'application/json'},
                   body: JSON.stringify({
